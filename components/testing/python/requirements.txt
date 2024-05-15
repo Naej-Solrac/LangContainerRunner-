@@ -1,0 +1,11 @@
+Flask==2.0.1            # Framework web
+Django==3.2.5           # Framework web
+fastapi==0.68.0         # Framework web para APIs de alto rendimiento
+
+
+
+
+pytest==6.2.5           # Framework de pruebas
+pytest-json
+flake8==3.9.2           # Herramienta de estilo y errores
+mypy==0.910             # Chequeo de tipos estáticos

@@ -1,0 +1,18 @@
+# Establece la imagen base. Python 3.8 es una versión común, pero puedes usar cualquier versión que necesites.
+FROM python:3.8-slim
+
+# Establece el directorio de trabajo en el contenedor
+WORKDIR /app
+
+# Copia el archivo de requisitos primero, para aprovechar la caché de las capas de Docker
+COPY requirements.txt .
+
+# Instala las dependencias de Python
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia el resto de tu aplicación al directorio de trabajo
+COPY . .
+
+# Comando para ejecutar al iniciar el contenedor
+CMD ["python", "app.py"]
+
